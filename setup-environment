@@ -28,9 +28,9 @@ usage()
     echo -e "
 Usage: MACHINE=<machine> DISTRO=<distro> source $PROGNAME <build-dir>
 Usage:                                   source $PROGNAME <build-dir>
-    <machine>    machine name
-    <distro>     distro name
-    <build-dir>  build directory
+    <machine>    machine name (i.e. openglow_std)
+    <distro>     distro name (i.e. openglow)
+    <build-dir>  build directory (i.e. openglow-bsp)
 
 The first usage is for creating a new build directory. In this case, the
 script creates the build directory <build-dir>, configures it for the
@@ -233,24 +233,9 @@ fi
 
 cat <<EOF
 
-Welcome to Freescale Community BSP
+Welcome to OpenGlow BSP
 
-The Yocto Project has extensive documentation about OE including a
-reference manual which can be found at:
-    http://yoctoproject.org/documentation
-
-For more information about OpenEmbedded see their website:
-    http://www.openembedded.org/
-
-You can now run 'bitbake <target>'
-
-Common targets are:
-    core-image-minimal
-    meta-toolchain
-    meta-toolchain-sdk
-    adt-installer
-    meta-ide-support
-
+You can now run 'bitbake openglow'
 EOF
 
 if [ -n "$generated_config" ]; then
